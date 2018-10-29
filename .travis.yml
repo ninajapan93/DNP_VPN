@@ -47,6 +47,7 @@ jobs:
         - . sdkMock.sh # just exports $VERSION_TAG
         - echo "before_deploy; CALLING ECHO ON VAR, $VERSION_TAG"
         - git tag "master2"
+        - git checkout master
       # Advanced: optionally overwrite your default `script` step to skip the tests
       deploy:
         provider: releases
